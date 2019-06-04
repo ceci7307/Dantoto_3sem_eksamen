@@ -22,11 +22,11 @@ body {
 }
 
 .info h1 {
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .info p {
-  font-size: 14px;
+  font-size: 24px;
 }
 
 svg {
@@ -142,8 +142,8 @@ svg {
   margin: auto;
   position: absolute;
   z-index: 10;
-  top: 40vw;
-  left: 25vw;
+  top: 40%;
+  left: 31%;
 }
 
 .countdown-number {
@@ -195,8 +195,8 @@ svg {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   position: absolute;
-  top: 60vw;
-  left: 45vw;
+  top: 64vw;
+  left: 43vw;
   z-index: 10;
 }
 

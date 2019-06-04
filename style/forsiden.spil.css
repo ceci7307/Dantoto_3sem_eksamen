@@ -1,0 +1,39 @@
+
+html{
+    overflow: hidden;
+
+}
+
+#stretch{
+  width:100%;
+
+
+    background-color: wheat;
+}
+
+
+.e-button {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  background: linear-gradient(to right, #ff5e3a 0%, #ff2a68 100%);
+  padding: 20px 40px;
+  color: white;
+  box-shadow: 0px 40px 30px -10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+.e-button:hover {
+  box-shadow: 0px 20px 15px -5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.e-button:active {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+

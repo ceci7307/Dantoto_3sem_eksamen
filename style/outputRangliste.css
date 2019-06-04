@@ -97,17 +97,18 @@ section .saldo button:focus {
 
 @media screen and (min-width: 500px) {
   section {
-    width: 600px;
-    height: auto;
+    width: 80%;
     margin: auto;
+
+
   }
 
   section .vinder {
     display: grid;
-    grid-template-columns: auto auto auto;
+
     text-align: center;
     margin: auto;
-    width: 500px;
+
   }
 
   section .vinder img {
@@ -119,7 +120,7 @@ section .saldo button:focus {
   section .rangliste {
     border: solid 1px black;
     margin: auto;
-    width: 600px;
+    width: 100%;
   }
 
   section .rangliste h1 {
@@ -132,16 +133,16 @@ section .saldo button:focus {
 
   section .saldo {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr;
     margin-top: 1vw;
     grid-gap: 5px;
   }
 
   section .saldo .nysaldo {
     display: grid;
-    grid-template-columns: auto auto;
+
     border: solid 1px black;
-    width: 300px;
+    width: 100%;
     padding-left: 1vw;
   }
 
@@ -158,7 +159,7 @@ section .saldo button:focus {
 
   section .saldo .knap {
     cursor: pointer;
-    width: 30vh;
+    width: 100%;
     height: 5vw;
     right: 0;
     color: #ffffff;

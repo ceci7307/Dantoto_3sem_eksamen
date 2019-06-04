@@ -48,6 +48,7 @@ a {
 .burgermenu {
   display: grid;
   grid-template-columns: 1fr 1fr;
+     background-color: rgba(146, 165, 96, 0.43);
 }
 
 .burger {
@@ -56,7 +57,7 @@ a {
   border: none;
   justify-self: end;
   padding-bottom: 3em;
-  padding-right: 1em;
+  padding-right: 3em;
   padding-left: 3em;
   padding-top: 3em;
 }
@@ -107,9 +108,15 @@ header a:hover {
   transition: 0.4s;
 }
 
+
+
 nav {
   overflow: hidden;
   transition: 0s;
+}
+
+.topnav{
+    display: none;
 }
 
 nav.show {
@@ -143,10 +150,19 @@ nav.show {
     display: none;
   }
 
+    .topnav{
+        width: 100%;
+        display: block;
+
+
+    }
+
   .desktop_nav {
-    margin-bottom: 50px;
+
     display: grid;
-    padding-top: 30px;
+margin-top: -3.5px;
+      background-color: rgba(146, 165, 96, 0.43);
+
   }
 
   header li {
@@ -238,6 +254,8 @@ nav.show {
 }
 
 /*ØVRE SEKTION*/
+
+
 main {
   display: grid;
   grid-template-columns: 1fr;
@@ -245,30 +263,24 @@ main {
 }
 .hint {
   font-size: 30px;
-  color: black;
+  color: white;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-/* SPLASH SPIL */
-#spil {
-  width: 100%;
-
-  height: 80vh;
+    padding: 30px;
 }
 
 /* SPLASH SPIL */
 .sidebar-right {
-  width: 100%;
+  width: 80%;
+    margin: auto;
   box-shadow: 10px 10px 10px 10px;
 }
 
 /* PROGRESS BAR */
 .container {
-  width: 100%;
-  right: 15%;
-  top: 10%;
-  margin-bottom: 50px;
+padding: 20px 20px;
+width: 80%;
+   margin-left: 5%;
+
 }
 
 .container #progressbar {
@@ -278,20 +290,20 @@ main {
 .container #progressbar li {
   list-style: none;
   display: block;
-  width: 30%;
   position: relative;
   text-align: center;
   color: white;
   margin: 0;
+
 }
 
 .container #progressbar li:before {
   content: counter(step);
   counter-increment: step;
-  width: 30px;
-  height: 30px;
+    margin: auto;
+  width: 80px;
+  height: 80px;
   line-height: 80px;
-  border: 2px solid #feb700;
   border-radius: 100%;
   display: block;
   text-align: center;
@@ -301,42 +313,21 @@ main {
   margin-bottom: 3vw;
 }
 
-.container #progressbar li:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  top: 40px;
-  left: -50%;
-  z-index: -1;
-}
 #progressbar h1 {
   color: black;
-  margin: 0;
+  margin: auto;
   width: 70vw;
+
+
 }
+
 #progressbar p {
   color: black;
-  margin: 0;
+  margin: auto;
   width: 70vw;
+
 }
 
-.container #progressbar li:first-child:after {
-  content: none;
-}
-
-.container #progressbar li.active a {
-  color: white;
-}
-
-.container #progressbar li.active:before {
-  border-color: #feb700;
-}
-
-.container #progressbar li.active + li:after {
-  background-color: #fff;
-}
 
 /* CONTENT */
 .allcontent {
@@ -351,18 +342,13 @@ main {
 
 /*LYNSPILLET*/
 
-.opdeling {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 140%;
-}
 
 .lynspil {
-  left: 10%;
+    width: 60%;
+
   font-size: 14px;
   height: auto;
-
-  right: 15%;
+margin: auto;
 }
 
 #mobilGone1,
@@ -372,8 +358,9 @@ main {
 
 /*TEKSTEN DER SKRIVES*/
 .infomation_lynspil {
-  color: #8c241b;
+  color: black;
   text-align: center;
+   font-size: 2em;
 }
 
 /*LYNSPILLET BOXE*/
@@ -421,9 +408,20 @@ main {
 
 button {
   cursor: pointer;
-  margin-bottom: 20px;
+
+border: 3 solid white;
+  background-color: #dc5f11;
+    color: white;
+
+    background-color: ;
+    padding: 10px 30px;
+    margin-bottom: 10%;
 }
 
+button:hover{
+    background-color: white;
+    color: black;
+}
 /*VIDEO*/
 
 #nyhed {
@@ -446,79 +444,72 @@ footer {
 
 #tider img {
   width: 50%;
-  height: 200px;
+  height: 100px;
+    padding: 30px 30px;
 }
 
 .kundeservice {
   background-color: WHITE;
   color: black;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10%;
 }
 
-.overskrift {
-  font-weight: 600;
-}
-
-a {
-  color: black;
-}
 
 @media screen and (min-width: 750px) {
-  /* HEADER & NAV */
-  #nav {
-    width: 100%;
-    height: 50px;
-  }
-  #nav img {
-    width: 100px;
-  }
 
-  #nav p {
-    display: inline-block;
-    margin: 0.3vw;
-    color: black;
 
-    opacity: 0.5;
-    font-size: 10px;
-    margin-top: -2%;
-  }
   /*ØVRE SEKTION*/
   main {
     display: grid;
-    grid-template-columns: 1.5fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     margin: 1vw;
   }
 
-  /* SPLASH SPIL */
-  #spil {
-    width: 100%;
-  }
+
+/* SPLASH SPIL */
+.sidebar-right {
+  width: 100%;
+    height: auto;
+    margin: auto;
+  box-shadow: 10px 10px 10px 10px;
+}
+
+
+
 
   .hint {
     font-size: 30px;
+      line-height: 200%;
     color: black;
     position: absolute;
-    left: 10vw;
-    top: 15vw;
+margin: auto;
+    top:36vw;
   }
 
   /* PROGRESS BAR */
   .container {
+
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
+      padding: 20px 20px;
+
   }
 
   .container #progressbar {
     counter-reset: step;
-    margin-left: 5vw;
+
   }
 
   .container #progressbar li {
     list-style: none;
     display: inline-block;
     width: 30%;
-    position: relative;
+
+
     text-align: center;
     color: white;
   }
@@ -532,6 +523,7 @@ a {
     border: 2px solid #feb700;
     border-radius: 100%;
     display: block;
+
     text-align: center;
     margin: 0 auto 10px auto;
     background-color: #feb700;
@@ -542,7 +534,7 @@ a {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
+
     top: 40px;
     left: -50%;
     z-index: -1;
@@ -560,18 +552,17 @@ a {
     border-color: #feb700;
   }
 
-  .container #progressbar li.active + li:after {
-    background-color: #fff;
-  }
   #progressbar h1 {
     color: black;
-    margin: 0;
+    margin: auto;
     width: 25vw;
+
   }
   #progressbar p {
     color: black;
-    margin: 0;
+    margin: auto;
     width: 25vw;
+
   }
 
   /* CONTENT */
@@ -600,14 +591,13 @@ a {
 
   /*TEKSTEN DER SKRIVES*/
   .infomation_lynspil {
-    font-size: 17px;
+    font-size: 27px;
     top: 100%;
-    width: 500px;
     color: black;
     opacity: 0.7;
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
+
+
   }
 
   /*LYNSPILLET BOXE*/
@@ -652,11 +642,14 @@ a {
     position: relative;
     cursor: pointer;
   }
+
+
   .allcontent section {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
   }
+
   #mobilGone1 {
     display: block;
   }
@@ -676,6 +669,7 @@ a {
   #nyhed {
     display: block;
     width: 50%;
+
     margin: auto;
   }
 
@@ -694,36 +688,14 @@ a {
     text-align: center;
   }
 
-  .overskrift {
-    font-weight: 600;
-  }
-
-  a {
-    color: black;
-  }
+    #tider img{
+       width: 50%;
+    }
 }
 
+
 @media screen and (min-width: 1024px) {
-  /* HEADER & NAV */
-  #nav {
-    width: 100%;
-    height: 50px;
-  }
 
-  /*FOOTER*/
-  #nav img {
-    width: 160px;
-  }
-
-  #nav p {
-    display: inline-block;
-    margin: 2vw;
-    color: black;
-
-    opacity: 0.5;
-    font-size: 1em;
-    margin-top: -2%;
-  }
 
   /*ØVRE SEKTION*/
   main {
@@ -733,19 +705,25 @@ a {
   }
 
   /* SPLASH SPIL */
-  #spil {
-    width: 100%;
-
-    height: 80vh;
-  }
 
   .hint {
-    font-size: 30px;
+   font-size: 50px;
+      line-height: 200%;
     color: black;
     position: absolute;
-    left: 10vw;
-    top: 10vw;
+margin: auto;
+    top:20vw;
+
   }
+
+    .sidebar-right {
+  width: 80%;
+    margin: auto;
+  box-shadow: 10px 10px 10px 10px;
+}
+
+
+
 
   /* PROGRESS BAR */
   .container {
@@ -827,26 +805,27 @@ a {
   }
   #progressbar p {
     width: 350px;
+      font-size: 1em;
   }
   #progressbar h1 {
     width: 350px;
+      font-size: 1.5em;
   }
 
   /*LYNSPILLET*/
 
   .opdeling {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 140%;
+   margin: auto;
+    width: 100%;
   }
 
   .lynspil {
-    position: relative;
-    left: 10%;
+
+
     font-size: 14px;
     height: 500px;
 
-    right: 15%;
+
   }
   #mobilGone1,
   #mobilGone2 {
@@ -855,16 +834,12 @@ a {
 
   /*TEKSTEN DER SKRIVES*/
   .infomation_lynspil {
-    font-size: 25px;
-    top: 100%;
-    margin-top: 10vw;
-    width: 900px;
+    font-size: 45px;
+    margin: auto;
     color: black;
     opacity: 0.7;
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);
+
   }
 
   /*LYNSPILLET BOXE*/
@@ -915,15 +890,20 @@ a {
     margin-bottom: 20px;
   }
 
-  /*VIDEO*/
+  /*MOBIL ENHED*/
 
   .mobil_version {
     color: black;
     text-align: center;
+      font-size: 2em;
   }
 
   #nyhed {
     display: block;
+    width: 40%;
+
+    margin: auto;
+
   }
 
   /*FOOTER*/
@@ -938,17 +918,11 @@ a {
   .kundeservice {
     background-color: WHITE;
     color: black;
-    padding: 10px;
+    padding: 30px 50px;
     text-align: center;
   }
 
-  .overskrift {
-    font-weight: 600;
-  }
 
-  a {
-    color: black;
-  }
   #footer {
     display: flex;
     flex-wrap: wrap;
@@ -977,7 +951,5 @@ a {
   #tider img {
     width: 100%;
   }
-  footer img {
-    margin-bottom: -10px;
-  }
+
 }

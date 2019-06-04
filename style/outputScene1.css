@@ -2,9 +2,10 @@
 /* VARIABLER */
 /* GENERELT */
 body {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   font-family: "Open Sans", sans-serif;
   margin: 0;
+
 }
 
 img {
@@ -19,14 +20,17 @@ img {
 .velkommen {
   height: auto;
   line-height: 40px;
+     text-align: center;
 }
 
 .velkommen span {
   color: #dc5f11;
+     text-align: center;
 }
 
 .velkommen p {
-  font-size: 12px;
+  font-size: 15px;
+    text-align: center;
 }
 
 /* VÆLG HESTE */
@@ -37,12 +41,17 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+
+
 }
+
+
 
 main .wrap {
   padding: 1vw;
   display: grid;
   grid-template-columns: auto;
+
 }
 
 #horses {
@@ -180,9 +189,7 @@ form .button a {
   color: #ffffff;
 }
 
-/* input:valid {
-  border-color: #24cf5f;
-} */
+
 .form-list {
   padding-left: 0;
   list-style: none;
@@ -205,12 +212,10 @@ form .button a {
   justify-content: center;
   align-items: center;
   margin-top: 3vw;
+    margin: auto;
 }
 
-.modalen img {
-  padding-top: 80px;
-  width: 100%;
-}
+
 
 .modalen a {
   text-decoration: none;
@@ -219,12 +224,12 @@ form .button a {
 
 .modalen input {
   min-height: 30px;
-  width: 90%;
-  padding-left: 5px;
-  padding-right: 5px;
+  width: 100%;
+margin: auto;
   letter-spacing: 0.5px;
   border: 0;
   border-bottom: 2px solid #f0f0f0;
+    margin: auto;
 }
 
 .modalen input[type="tel"] {
@@ -238,9 +243,8 @@ form .button a {
 
 .modal__container {
   display: flex;
-  width: 675px;
-  height: 100%;
-  margin-bottom: 125px;
+    margin: auto;
+
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
@@ -255,6 +259,8 @@ form .button a {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: none;
+
+
 }
 
 .modal__circle {
@@ -271,7 +277,7 @@ form .button a {
 
 .modal__content {
   padding: 40px 30px;
-  width: 300px;
+  width: 100%;
 }
 
 .fb-but {
@@ -312,6 +318,7 @@ form .button a {
   opacity: 0;
   pointer-events: none;
   transition: 1s;
+    margin: auto;
 }
 
 #modal.vis {
