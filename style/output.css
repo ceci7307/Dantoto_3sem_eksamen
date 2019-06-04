@@ -369,6 +369,12 @@ main {
 #mobilGone2 {
   display: none;
 }
+.lynspiltxt {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  color: black;
+}
 
 /*TEKSTEN DER SKRIVES*/
 .infomation_lynspil {
@@ -832,6 +838,22 @@ a {
     width: 350px;
   }
 
+  .fordele {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  .fordele p {
+    color: black;
+  }
+  .fordele h1 {
+    color: black;
+    font-size: 25px;
+  }
+  .fordele span {
+    color: #dc5f11;
+  }
+
   /*LYNSPILLET*/
 
   .opdeling {
@@ -851,6 +873,12 @@ a {
   #mobilGone1,
   #mobilGone2 {
     display: block;
+  }
+  .lynspiltxt {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    color: black;
   }
 
   /*TEKSTEN DER SKRIVES*/
