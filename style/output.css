@@ -1,0 +1,983 @@
+/* VARIABLER */
+
+/* GENERELT */
+html {
+  background: url(../img/baggrund-01-01.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+body h1,
+body p {
+  color: white;
+}
+h1 {
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* HEADER & NAV */
+
+/* HEADER & NAV */
+
+/*MOBIL VERSION*/
+.mobil {
+  display: grid;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.mobil_nav {
+  display: none;
+}
+.burgermenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.burger {
+  cursor: pointer;
+
+  border: none;
+  justify-self: end;
+  padding-bottom: 3em;
+  padding-right: 1em;
+  padding-left: 3em;
+  padding-top: 3em;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.nav_burger_logo {
+  width: 100%;
+}
+
+.nav_burger_logo:hover {
+  opacity: 0.6;
+}
+
+header li {
+  padding-top: 30px;
+  cursor: pointer;
+  text-align: center;
+  font-family: heebo, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: darkgrey;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+nav {
+  overflow: hidden;
+  transition: 0s;
+}
+
+nav.show {
+  max-height: 500px;
+  display: block;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-4px, -8px);
+}
+
+.desktop_nav {
+  display: none;
+}
+
+/*NAVIGATION PÅ DESKTOP*/
+@media screen and (min-width: 768px) {
+  .burgermenu {
+    display: none;
+  }
+
+  .mobil {
+    display: none;
+  }
+
+  .desktop_nav {
+    margin-bottom: 50px;
+    display: grid;
+    padding-top: 30px;
+  }
+
+  header li {
+    padding-top: 0px;
+  }
+
+  .list {
+    cursor: pointer;
+    text-align: center;
+    font-family: heebo, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+  }
+
+  .billede_li {
+    margin-top: -15%;
+    cursor: pointer;
+  }
+
+  .nav_logo {
+    justify-self: center;
+    width: 100%;
+    height: 100px;
+  }
+
+  .nav_logo:hover {
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: 1100px) {
+    .nav_logo {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .nav_logo {
+      width: 100%;
+    }
+  }
+
+  header ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    padding-top: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-family: heebo, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+  }
+
+  .dropdown {
+    display: inline-block;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-top: 0px;
+  }
+
+  .dropdown-content {
+    z-index: 90;
+    display: none;
+
+    position: relative;
+
+    transition: 0.3s;
+    text-align-last: center;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: inline-grid;
+
+    color: black;
+    /*        position: fixed;*/
+    text-align-last: center;
+  }
+}
+
+/*ØVRE SEKTION*/
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1vw;
+}
+.hint {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* SPLASH SPIL */
+#spil {
+  width: 100%;
+
+  height: 80vh;
+}
+
+/* SPLASH SPIL */
+.sidebar-right {
+  width: 100%;
+  box-shadow: 10px 10px 10px 10px;
+}
+
+/* PROGRESS BAR */
+.container {
+  width: 100%;
+  right: 15%;
+  top: 10%;
+  margin-bottom: 50px;
+}
+
+.container #progressbar {
+  counter-reset: step;
+}
+
+.container #progressbar li {
+  list-style: none;
+  display: block;
+  width: 30%;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.container #progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 80px;
+  border: 2px solid #feb700;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  background-color: #feb700;
+  margin-left: 30vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+.container #progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  top: 40px;
+  left: -50%;
+  z-index: -1;
+}
+#progressbar h1 {
+  color: black;
+  margin: 0;
+  width: 70vw;
+}
+#progressbar p {
+  color: black;
+  margin: 0;
+  width: 70vw;
+}
+
+.container #progressbar li:first-child:after {
+  content: none;
+}
+
+.container #progressbar li.active a {
+  color: white;
+}
+
+.container #progressbar li.active:before {
+  border-color: #feb700;
+}
+
+.container #progressbar li.active + li:after {
+  background-color: #fff;
+}
+
+/* CONTENT */
+.allcontent {
+  width: 100%;
+  height: auto;
+}
+
+.allcontent section {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+/*LYNSPILLET*/
+
+.opdeling {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 140%;
+}
+
+.lynspil {
+  left: 10%;
+  font-size: 14px;
+  height: auto;
+
+  right: 15%;
+}
+
+#mobilGone1,
+#mobilGone2 {
+  display: none;
+}
+
+/*TEKSTEN DER SKRIVES*/
+.infomation_lynspil {
+  color: #8c241b;
+  text-align: center;
+}
+
+/*LYNSPILLET BOXE*/
+.allcontent section .lynspil .lynspillet {
+  background-color: #dc5f11;
+  border-radius: 12px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.allcontent section .lynspil .lynspillet p {
+  color: white;
+}
+
+.allcontent section .lynspil .lynspillet h1 {
+  color: white;
+  font-size: 24px;
+  background-color: #feb700;
+}
+
+.allcontent section .lynspil .checkbox {
+  font-size: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.amount {
+  width: 90%;
+  font-size: 1em;
+  text-align: center;
+  height: 30%;
+  position: relative;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/*VIDEO*/
+
+#nyhed {
+  display: none;
+}
+
+.mobil_version {
+  color: black;
+  text-align: center;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #92a560;
+  color: white;
+  opacity: 0.8;
+  width: 100%;
+  text-align: center;
+}
+
+#tider img {
+  width: 50%;
+  height: 200px;
+}
+
+.kundeservice {
+  background-color: WHITE;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.overskrift {
+  font-weight: 600;
+}
+
+a {
+  color: black;
+}
+
+@media screen and (min-width: 750px) {
+  /* HEADER & NAV */
+  #nav {
+    width: 100%;
+    height: 50px;
+  }
+  #nav img {
+    width: 100px;
+  }
+
+  #nav p {
+    display: inline-block;
+    margin: 0.3vw;
+    color: black;
+
+    opacity: 0.5;
+    font-size: 10px;
+    margin-top: -2%;
+  }
+  /*ØVRE SEKTION*/
+  main {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr;
+    margin: 1vw;
+  }
+
+  /* SPLASH SPIL */
+  #spil {
+    width: 100%;
+  }
+
+  .hint {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    left: 10vw;
+    top: 15vw;
+  }
+
+  /* PROGRESS BAR */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container #progressbar {
+    counter-reset: step;
+    margin-left: 5vw;
+  }
+
+  .container #progressbar li {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .container #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: 2px solid #feb700;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #feb700;
+  }
+
+  .container #progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    top: 40px;
+    left: -50%;
+    z-index: -1;
+  }
+
+  .container #progressbar li:first-child:after {
+    content: none;
+  }
+
+  .container #progressbar li.active a {
+    color: white;
+  }
+
+  .container #progressbar li.active:before {
+    border-color: #feb700;
+  }
+
+  .container #progressbar li.active + li:after {
+    background-color: #fff;
+  }
+  #progressbar h1 {
+    color: black;
+    margin: 0;
+    width: 25vw;
+  }
+  #progressbar p {
+    color: black;
+    margin: 0;
+    width: 25vw;
+  }
+
+  /* CONTENT */
+  .allcontent {
+    width: 100%;
+    height: auto;
+  }
+
+  .allcontent section {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  /*LYNSPILLET*/
+
+  .opdeling {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 140%;
+  }
+
+  .lynspil {
+    width: 300px;
+    margin: auto;
+  }
+
+  /*TEKSTEN DER SKRIVES*/
+  .infomation_lynspil {
+    font-size: 17px;
+    top: 100%;
+    width: 500px;
+    color: black;
+    opacity: 0.7;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  /*LYNSPILLET BOXE*/
+  .allcontent section .lynspil .lynspillet {
+    background-color: #dc5f11;
+    border-radius: 12px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+
+  .allcontent section .lynspil .lynspillet p {
+    color: white;
+  }
+
+  .allcontent section .lynspil .lynspillet h1 {
+    color: white;
+    font-size: 24px;
+    background-color: #feb700;
+  }
+
+  .allcontent section .lynspil .checkbox {
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .amount {
+    width: 90%;
+    font-size: 1em;
+    text-align: center;
+    height: 30%;
+    position: relative;
+    cursor: pointer;
+  }
+  .allcontent section {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+  #mobilGone1 {
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  /*VIDEO*/
+
+  .mobil_version {
+    color: black;
+    text-align: center;
+  }
+
+  #nyhed {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+
+  /*FOOTER*/
+  footer {
+    background-color: #92a560;
+    color: white;
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  .kundeservice {
+    background-color: WHITE;
+    color: black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .overskrift {
+    font-weight: 600;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* HEADER & NAV */
+  #nav {
+    width: 100%;
+    height: 50px;
+  }
+
+  /*FOOTER*/
+  #nav img {
+    width: 160px;
+  }
+
+  #nav p {
+    display: inline-block;
+    margin: 2vw;
+    color: black;
+
+    opacity: 0.5;
+    font-size: 1em;
+    margin-top: -2%;
+  }
+
+  /*ØVRE SEKTION*/
+  main {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr;
+    margin: 2vw;
+  }
+
+  /* SPLASH SPIL */
+  #spil {
+    width: 100%;
+
+    height: 80vh;
+  }
+
+  .hint {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    left: 10vw;
+    top: 10vw;
+  }
+
+  /* PROGRESS BAR */
+  .container {
+    width: 140%;
+    position: relative;
+    right: 15%;
+    top: 10%;
+    margin-bottom: 50px;
+  }
+
+  .container #progressbar {
+    counter-reset: step;
+  }
+  #progressbar ul {
+    margin-left: 0px;
+  }
+
+  .container #progressbar li {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .container #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: 2px solid #feb700;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #feb700;
+  }
+
+  .container #progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    top: 40px;
+    left: -50%;
+    z-index: -1;
+  }
+
+  .container #progressbar li:first-child:after {
+    content: none;
+  }
+
+  .container #progressbar li.active a {
+    color: white;
+  }
+
+  .container #progressbar li.active:before {
+    border-color: #feb700;
+  }
+
+  .container #progressbar li.active + li:after {
+    background-color: #fff;
+  }
+
+  /* CONTENT */
+  .allcontent {
+    margin: auto;
+    width: 900px;
+    height: auto;
+  }
+
+  .allcontent section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+  }
+  #progressbar p {
+    width: 350px;
+  }
+  #progressbar h1 {
+    width: 350px;
+  }
+
+  /*LYNSPILLET*/
+
+  .opdeling {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 140%;
+  }
+
+  .lynspil {
+    position: relative;
+    left: 10%;
+    font-size: 14px;
+    height: 500px;
+
+    right: 15%;
+  }
+  #mobilGone1,
+  #mobilGone2 {
+    display: block;
+  }
+
+  /*TEKSTEN DER SKRIVES*/
+  .infomation_lynspil {
+    font-size: 25px;
+    top: 100%;
+    margin-top: 10vw;
+    width: 900px;
+    color: black;
+    opacity: 0.7;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+
+  /*LYNSPILLET BOXE*/
+  .allcontent section .lynspil .lynspillet {
+    background-color: #dc5f11;
+    border-radius: 12px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+
+  .allcontent section .lynspil .lynspillet p {
+    color: white;
+  }
+
+  .allcontent section .lynspil .lynspillet h1 {
+    color: white;
+    font-size: 24px;
+    background-color: #feb700;
+  }
+
+  .allcontent section .lynspil .checkbox {
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .amount {
+    width: 90%;
+    font-size: 1em;
+    text-align: center;
+    height: 30%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  button {
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  /*VIDEO*/
+
+  .mobil_version {
+    color: black;
+    text-align: center;
+  }
+
+  #nyhed {
+    display: block;
+  }
+
+  /*FOOTER*/
+  footer {
+    background-color: #92a560;
+    color: white;
+    opacity: 0.8;
+
+    width: 100%;
+  }
+
+  .kundeservice {
+    background-color: WHITE;
+    color: black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .overskrift {
+    font-weight: 600;
+  }
+
+  a {
+    color: black;
+  }
+  #footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 4vw;
+    text-align: left;
+  }
+  #persondata {
+    flex-basis: 170px;
+  }
+
+  #kontakt {
+    flex-basis: 180px;
+  }
+
+  #adresse {
+    flex-basis: 170px;
+  }
+
+  #tider {
+    flex-basis: 310px;
+  }
+
+  #tider img {
+    width: 100%;
+  }
+  footer img {
+    margin-bottom: -10px;
+  }
+}
