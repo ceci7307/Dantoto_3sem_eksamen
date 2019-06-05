@@ -355,6 +355,12 @@ margin: auto;
 #mobilGone2 {
   display: none;
 }
+.lynspiltxt {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  color: black;
+}
 
 /*TEKSTEN DER SKRIVES*/
 .infomation_lynspil {
@@ -701,7 +707,7 @@ margin: auto;
   main {
     display: grid;
     grid-template-columns: 1.5fr 1.2fr;
-    margin: 2vw;
+    margin-right: 4vw;
   }
 
   /* SPLASH SPIL */
@@ -717,7 +723,7 @@ margin: auto;
   }
 
     .sidebar-right {
-  width: 80%;
+    width: 100%;
     margin: auto;
   box-shadow: 10px 10px 10px 10px;
 }
@@ -812,6 +818,22 @@ margin: auto;
       font-size: 1.5em;
   }
 
+  .fordele {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  .fordele p {
+    color: black;
+  }
+  .fordele h1 {
+    color: black;
+    font-size: 25px;
+  }
+  .fordele span {
+    color: #dc5f11;
+  }
+
   /*LYNSPILLET*/
 
   .opdeling {
@@ -830,6 +852,12 @@ margin: auto;
   #mobilGone1,
   #mobilGone2 {
     display: block;
+  }
+  .lynspiltxt {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    color: black;
   }
 
   /*TEKSTEN DER SKRIVES*/
