@@ -138,6 +138,7 @@ function visModal() {
   let modal = document.querySelector("#modal");
   modal.classList.add("vis");
   modal.querySelector(".luk").addEventListener("click", skjulModal);
+document.querySelector("#knap").style.display="none";
 }
 function skjulModal() {
   modal.classList.remove("vis");

@@ -56,6 +56,7 @@ function visModal() {
   modal = document.querySelector("#modalen");
   modal.classList.add("vis");
   document.querySelector(".modal__featured").style.display = "none";
+      document.querySelector(".button").style.display = "none";
 }
 //MODAL WRONG
 function visModal_wrong() {
@@ -63,8 +64,10 @@ function visModal_wrong() {
   modal.classList.add("vis");
   document.querySelector(".modal__featured").style.display = "none";
   modal.querySelector(".luk").addEventListener("click", skjulModal);
+          document.querySelector(".button").style.display = "none";
 }
 
 function skjulModal() {
   modal.classList.remove("vis");
+          document.querySelector(".button").style.display = "block";
 }
